@@ -19,5 +19,5 @@ function __ortega_prompt -a last_status
 
     set -q theme_hood_ornament; or set -l theme_hood_ornament "🢂"
 
-    printf "$theme_hood_ornament" ' '
+    echo -e "$theme_hood_ornament "
 end
