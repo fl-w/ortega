@@ -19,8 +19,7 @@ $ omf install folws/ortega
 
 ## Features
 
-* Lorem ipsum dolor sit amet.
-* Consectetur adipisicing elit.
+* vcs aware (git, mercurial, svn)
 
 
 ## Screenshot

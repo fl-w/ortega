@@ -17,5 +17,7 @@ function __ortega_prompt -a last_status
         set_color magenta
     end
 
-    printf '🢂 '
+    set -q theme_hood_ornament; or set -l theme_hood_ornament "🢂"
+
+    printf "$theme_hood_ornament" ' '
 end
