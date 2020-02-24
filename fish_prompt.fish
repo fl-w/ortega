@@ -7,10 +7,10 @@ function fish_prompt
 end
 
 function __ortega_prompt -a last_status
-    if test $last_status -ne 0
+    if [ $last_status != 0]
         set_color $fish_color_error
 
-        if [ "$theme_display_err_code" = "yes" ]
+       if [ "$theme_display_err_code" = "yes" ]
             printf '[%d] ' $last_status
         end
     else
