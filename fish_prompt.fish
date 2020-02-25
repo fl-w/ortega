@@ -7,7 +7,7 @@ function fish_prompt
 end
 
 function __ortega_prompt -a last_status
-    if [ $last_status != 0]
+    if [ $last_status != 0 ]
         set_color $fish_color_error
 
        if [ "$theme_display_err_code" = "yes" ]
@@ -19,5 +19,5 @@ function __ortega_prompt -a last_status
 
     set -q theme_hood_ornament; or set -l theme_hood_ornament "🢂"
 
-    echo -e "$theme_hood_ornament "
+    printf "$theme_hood_ornament "
 end
