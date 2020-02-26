@@ -10,10 +10,12 @@
 <br/>
 
 
+A clean minimal vcs aware theme.
+
 ## Install
 
 ```fish
-$ omf install folws/ortega
+$ omf install https://github.com/folws/ortega
 ```
 
 
@@ -22,7 +24,23 @@ $ omf install folws/ortega
 * vcs aware (git, mercurial, svn)
 
 
-## Screenshot
+## Configuration
+
+```
+set -g theme_short_path "no"
+```
+
+* `set -g theme_abbr_path` - set to yes to abbreviate path (default: no)
+* `set -g theme_short_path` - set to yes to only display the current directory name (default: no)
+* `set -g theme_display_err_code` - set yes to display error code of previous command (default: no)
+* `set -g theme_timestamp_shown` - set yes to display timestamp at end of your prompt (default: no)
+* `set -g theme_prompt_symbol` - set to whatever you want to show up before prompt (default: 🢂)
+* `set -g theme_show_user - set to yes to display user running command (default: 🢂)
+
+
+## Screenshots
+
+Coming!
 
 <p align="center">
 <img src="{{SCREENSHOT_URL}}">

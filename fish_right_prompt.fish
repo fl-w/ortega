@@ -1,15 +1,35 @@
 function fish_right_prompt --description 'Write out the right side of prompt'
 
-  __ortega_prompt
+  __ortega_user
+  __ortega_pwd
   __ortega_vcs_prompt
   __ortega_timestamp
 
   set_color normal
 end
 
+function __ortega_user
+  if test "$theme_show_user" = 'yes'
+    set_color $fish_color_cwd
+    printf $USER
+    set_color normal
+    echo -n " at "
+  end
+end
+
 function __ortega_pwd
+  set -l cwd
+
+  if test "$theme_short_path" = 'yes'
+    set cwd (basename (prompt_pwd))
+  else if test "$theme_abbr_path" = 'yes'
+    set cwd (prompt_pwd)
+  else
+    set cwd $PWD
+  end
+
   set_color $fish_color_cwd
-  printf '%s' (echo $PWD | sed -e "s|^$HOME|~|" -e 's|^/private||' -e 's|~/src/||')
+  printf '%s' (echo $cwd | sed -e "s|^$HOME|~|" -e 's|^/private||' -e 's|~/src/||')
 
   set_color normal
 end
@@ -40,7 +60,7 @@ function __ortega_vcs_prompt_status -d 'Summarize the current status in git'
 end
 
 function __ortega_timestamp -d 'Prints a human-readable timestamp in fish_color_cwd'
-  if set -q fish_prompt_timestamp_shown
+  if test "$theme_timestamp_shown" = 'yes'
     set_color $fish_color_autosuggestion
     printf ' %s' (date +%H:%M:%S)
     echo
