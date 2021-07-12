@@ -46,15 +46,16 @@ Coming!
 <img src="{{SCREENSHOT_URL}}">
 </p>
 
+## Unlicensed
 
-# License
+This are my personal dots so do what you want.
+Find the full [unlicense][] in the `UNLICENSE` file, but here's a snippet.
 
-[MIT][mit] © [folws][author] et [al][contributors]
+>This is free and unencumbered software released into the public domain.
+>
+>Anyone is free to copy, modify, publish, use, compile, sell, or distribute this software, either in source code form or as a compiled binary, for any purpose, commercial or non-commercial, and by any means.
 
+Do what you want. Learn as much as you can. Unlicense more software.
 
-[mit]:            https://opensource.org/licenses/MIT
-[author]:         https://github.com/folws
-[contributors]:   https://github.com/folws/theme-minimal-fish-prompt/graphs/contributors
 [omf-link]:       https://www.github.com/oh-my-fish/oh-my-fish
-
-[license-badge]:  https://img.shields.io/badge/license-MIT-007EC7.svg?style=flat-square
+[unlicense]: http://unlicense.org/
